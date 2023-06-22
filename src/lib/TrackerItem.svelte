@@ -35,4 +35,12 @@ header {
     border-block-end: 1px solid var(--tw-neutral-300);
     margin-block-end: .75rem;
 }
+
+@media (prefers-color-scheme: dark) {
+
+    .tracker-item {
+        background-color: var(--tw-neutral-700);
+    }
+
+}
 </style>

@@ -26,6 +26,18 @@
   --muted-color: var(--tw-neutral-500);
 }
 
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    /** DARK MODE DESIGN TOKENS */
+  --body-color: var(--tw-neutral-300);
+  --body-bg: var(--tw-neutral-800);
+  --heading-color: var(--tw-neutral-200);
+  --muted-color: var(--tw-neutral-400);
+  }
+
+}
+
 /* ------------------------------------------------------------------
 ** RESET
 -> https://andy-bell.co.uk/a-modern-css-reset/
