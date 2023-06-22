@@ -5,8 +5,17 @@
 </script>
 
 <article class="tracker-item">
-    <h2>{log.name}</h2>
-    <p class="text-muted">{log.date.toDateString()}</p>
+    <header>
+        <h2>
+            <a href="{log.url}">
+                {log.name}
+            </a>
+        </h2>
+        <p class="text-muted">
+            {log.date.toDateString()} &nbsp;⁂&nbsp;
+            {log.author}
+        </p>
+    </header>
     <p>{log.note}</p>
 </article>
 
@@ -20,5 +29,10 @@
 
 .tracker-item:not(:last-child) {
     margin-block-end: 1rem;
+}
+
+header {
+    border-block-end: 1px solid var(--tw-neutral-300);
+    margin-block-end: .5rem;
 }
 </style>
