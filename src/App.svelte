@@ -1,5 +1,6 @@
 <script>
   import LogRecord from "./lib/LogRecord";
+  import TrackerItem from "./lib/TrackerItem.svelte";
 
   let errorMessage = null;
 
@@ -17,7 +18,6 @@
   };
 
   let logsP = fetchLogs();
-
 </script>
 
 <main>
@@ -34,11 +34,7 @@
     </p>
   {:then logs} 
     {#each logs as log}
-      <article class="tracker-item">
-        <h2>{log.name}</h2>
-        <p class="text-muted">{log.date.toDateString()}</p>
-        <p>{log.note}</p>
-      </article>
+      <TrackerItem {log} />
     {/each}
   {/await}
 </main>
@@ -53,17 +49,6 @@
   .site-title {
     text-align: center;
     margin-block-end: 1rem;
-  }
-
-  .tracker-item {
-    background-color: var(--tw-neutral-100);
-    border: 1px solid var(--tw-neutral-400);
-    border-radius: var(--tw-rounded);
-    padding: .5rem 1rem;
-  }
-
-  .tracker-item + .tracker-item {
-    margin-block-start: 1rem;
   }
 
 </style>
