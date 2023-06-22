@@ -12,8 +12,9 @@
             </a>
         </h2>
         <p class="text-muted">
-            {log.date.toDateString()} &nbsp;⁂&nbsp;
-            {log.author}
+            {log.media}
+            &nbsp;⁂&nbsp; {log.date.toDateString()}
+            {#if log.author}&nbsp;⁂&nbsp; {log.author}{/if}
         </p>
     </header>
     <p>{log.note}</p>
@@ -25,6 +26,7 @@
     border: 1px solid var(--tw-neutral-400);
     border-radius: var(--tw-rounded);
     padding: .5rem 1rem;
+    position: relative;
 }
 
 .tracker-item:not(:last-child) {
