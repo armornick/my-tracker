@@ -7,4 +7,9 @@
 
 <style>
   
+  main {
+    max-width: 40rem;
+    margin-inline: auto;
+  }
+
 </style>
