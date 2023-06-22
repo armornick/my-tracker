@@ -1,6 +1,6 @@
 <script>
   import LogRecord from "./lib/LogRecord";
-  import TrackerItem from "./lib/TrackerItem.svelte";
+  import TrackerList from "./lib/TrackerList.svelte";
 
   let errorMessage = null;
 
@@ -21,7 +21,7 @@
 </script>
 
 <main>
-  <h1 class="site-title">Tracker</h1>
+  <h1 class="site-title">My Tracker</h1>
 
   {#if errorMessage}
     <p>
@@ -33,9 +33,7 @@
       Loading data.
     </p>
   {:then logs} 
-    {#each logs as log}
-      <TrackerItem {log} />
-    {/each}
+    <TrackerList {logs} />
   {/await}
 </main>
 
