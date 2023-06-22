@@ -33,6 +33,6 @@
 
 header {
     border-block-end: 1px solid var(--tw-neutral-300);
-    margin-block-end: .5rem;
+    margin-block-end: .75rem;
 }
 </style>
