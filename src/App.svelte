@@ -2,12 +2,13 @@
   import LogRecord from "./lib/LogRecord";
   import TrackerList from "./lib/TrackerList.svelte";
 
+  export let logsUrl;
   let errorMessage = null;
 
   /** @returns {Promise<LogRecord[]>} */
   const fetchLogs = async () => {
     try {
-      const response = await fetch('/misc-log.json');
+      const response = await fetch(logsUrl);
       const data = await response.json();
       return data.map(item => new LogRecord(item));
     } catch (error) {
