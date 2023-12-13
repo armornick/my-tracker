@@ -19,30 +19,3 @@
     </header>
     <p>{log.note}</p>
 </article>
-
-<style>
-.tracker-item {
-    background-color: var(--tw-neutral-100);
-    border: 1px solid var(--tw-neutral-400);
-    border-radius: var(--tw-rounded);
-    padding: .5rem 1rem;
-    position: relative;
-}
-
-.tracker-item:not(:last-child) {
-    margin-block-end: 1rem;
-}
-
-header {
-    border-block-end: 1px solid var(--tw-neutral-300);
-    margin-block-end: .75rem;
-}
-
-@media (prefers-color-scheme: dark) {
-
-    .tracker-item {
-        background-color: var(--tw-neutral-700);
-    }
-
-}
-</style>

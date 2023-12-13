@@ -1,14 +1,17 @@
-import './app.css'
-import App from './App.svelte'
+import App from './App.svelte';
+import scrape from './lib/tracker-item-scraper';
 
-const target = document.getElementById('app');
-const logsUrl = target.dataset.logs;
+const target = document.querySelector('[data-tracker]');
+const logs = scrape(target);
 
+// console.log(data);
+
+target.innerHTML = '';
 const app = new App({
   target,
   props: {
     // @ts-ignore
-    logsUrl,
+    logs,
   }
 })
 

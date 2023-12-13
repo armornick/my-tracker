@@ -6,7 +6,7 @@
     export let logs;
     /** @typedef {'earliest'|'latest'} SortOrder */
     /** @type {SortOrder} */
-    let sortOrder = 'earliest';
+    let sortOrder = 'latest';
     /** @type {null | string} */
     let currentFilter = null;
 
@@ -70,16 +70,3 @@
     {/each}
 </section>
 
-<style>
-    .action-panel {
-        background-color: var(--tw-neutral-100);
-        border: 1px solid var(--tw-neutral-400);
-        border-radius: var(--tw-rounded);
-        padding: .5rem 1rem;
-        margin-block-end: 1rem;
-    }
-
-    .action-panel > p:not(:last-child) {
-        margin-bottom: .5rem;
-    }
-</style>

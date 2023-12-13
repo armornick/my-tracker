@@ -124,6 +124,20 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ------------------------------------------------------------------
+** LAYOUT
+------------------------------------------------------------------ */
+
+main, section {
+  max-width: 45rem;
+  margin-inline: auto;
+}
+
+.site-title {
+  text-align: center;
+  margin-block-end: 1rem;
+}
+
+/* ------------------------------------------------------------------
 ** COMPONENTS
 ------------------------------------------------------------------ */
 
@@ -142,5 +156,42 @@ h1, h2, h3, h4, h5 {
 
 .btn + .btn {
   margin-left: .25rem;
+}
+
+.action-panel {
+  background-color: var(--tw-neutral-100);
+  border: 1px solid var(--tw-neutral-400);
+  border-radius: var(--tw-rounded);
+  padding: .5rem 1rem;
+  margin-block-end: 1rem;
+}
+
+.action-panel > p:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+.tracker-item {
+  background-color: var(--tw-neutral-100);
+  border: 1px solid var(--tw-neutral-400);
+  border-radius: var(--tw-rounded);
+  padding: .5rem 1rem;
+  position: relative;
+}
+
+.tracker-item:not(:last-child) {
+  margin-block-end: 1rem;
+}
+
+header {
+  border-block-end: 1px solid var(--tw-neutral-300);
+  margin-block-end: .75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .tracker-item {
+      background-color: var(--tw-neutral-700);
+  }
+
 }
 
